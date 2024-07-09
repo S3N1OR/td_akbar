@@ -1,4 +1,4 @@
-let itemCount = 4;
+let itemCount = 6;
 const container = document.querySelector('.container');
 
 function createItem(){
@@ -21,7 +21,7 @@ function createItem(){
 				</div>
 
 				<div id="result-${i}" class="result">
-					Упаковок: 0<br>Паллет: 0
+					Упаковок: 0 и 0 шт.<br>Паллет: 0
 				</div>
 			</div>
   		`
@@ -43,5 +43,5 @@ function result(itemCount){
 	let resultBox = Math.floor(count_all_pcs.value / count_box_pcs.value);
 	let resultPallet = Math.floor(resultBox / count_pallet_box.value);
 
-	result.innerHTML = `Упаковок: ${resultBox}<br>Паллет: ${resultPallet}`;
+	result.innerHTML = `Упаковок: ${resultBox} и ${count_all_pcs.value - (resultBox * count_box_pcs.value)} шт.<br>Паллет: ${resultPallet}`;
 }
