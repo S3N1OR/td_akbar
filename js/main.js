@@ -43,5 +43,5 @@ function result(itemCount){
 	let resultBox = Math.floor(count_all_pcs.value / count_box_pcs.value);
 	let resultPallet = Math.floor(resultBox / count_pallet_box.value);
 
-	result.innerHTML = `Упаковок: ${resultBox} и ${count_all_pcs.value - (resultBox * count_box_pcs.value)} шт.<br>Паллет: ${resultPallet}`;
+	result.innerHTML = `Упаковок: ${resultBox} и ${count_all_pcs.value - (resultBox * count_box_pcs.value)} шт.<br>Паллет: ${resultPallet} и ${resultBox - (resultPallet * count_pallet_box.value)} уп.`;
 }
